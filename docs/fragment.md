@@ -42,6 +42,7 @@ Add a cell to the document. Returns a [Fragment object](fragment.md).
 **Options:**
 
 - **width** (default: 100%) - the cell width
+- **minHeight** (default: 0) - the minimum height of the cell
 - **x** (default: undefined) - x coordinate of where to render the cell
 - **y** (default: undefined) - y (y starts at the bottom of the document) coordinate of where to render the cell
 - **padding**, **paddingTop**, **paddingRight**, **paddingBottom**, **paddingLeft** (default: 0) - the cell padding
@@ -151,4 +152,25 @@ Add a named destination to the document and the current position.
 doc.text('goto', { goTo: 'here' })
 doc.pageBreak()
 doc.destination('here')
+```
+
+### .outline(title, destination, [parent])
+
+Add an entry to the documents outline.
+
+**Arguments:**
+
+- **title** - the title shown for this outline entry
+- **destination** - the name of the destination the outline entry should point to (must be created separately)
+- **parent** - the title of the parent outline entry
+
+**Example:**
+
+```js
+doc.text('1. Section', { destination: '1' })
+doc.pageBreak()
+doc.text('1.1. Subsection', { destination: '1.1' })
+
+doc.outline('Section', '1')
+doc.outline('Subsection', '1.1', 'Section')
 ```

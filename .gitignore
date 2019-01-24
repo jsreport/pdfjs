@@ -1,6 +1,6 @@
 # dotfiles
 .*
-!.gitignore
+!.git*
 !.travis.yml
 
 # dependencies
@@ -8,6 +8,7 @@ node_modules
 
 # local files
 test.*
+/*.pdf
 
 # playground files
 playground/bundle.js
