@@ -18,6 +18,7 @@
   },
   "dependencies": {
     "@rkusa/linebreak": "^1.0.0",
+    "crypto-js": "4.0.0",
     "opentype.js": "^0.8.0",
     "pako": "^1.0.6",
     "readable-stream": "^2.3.6",
